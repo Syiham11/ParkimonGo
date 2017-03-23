@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Xamarin.Build.Download.0.4.2\build\Xamarin.Build.Download.props" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.2\build\Xamarin.Build.Download.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{12B73625-15D5-4AE2-B412-3A0F3AE609F6}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ParkimonGo.Droid</RootNamespace>
+    <AssemblyName>ParkimonGo.Droid</AssemblyName>
+    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
+    <AndroidTlsProvider></AndroidTlsProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidManagedSymbols>true</AndroidManagedSymbols>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="Xamarin.Android.Support.Compat">
+      <HintPath>..\packages\Xamarin.Android.Support.Compat.25.1.1\lib\MonoAndroid70\Xamarin.Android.Support.Compat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Core.UI">
+      <HintPath>..\packages\Xamarin.Android.Support.Core.UI.25.1.1\lib\MonoAndroid70\Xamarin.Android.Support.Core.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Core.Utils">
+      <HintPath>..\packages\Xamarin.Android.Support.Core.Utils.25.1.1\lib\MonoAndroid70\Xamarin.Android.Support.Core.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Media.Compat">
+      <HintPath>..\packages\Xamarin.Android.Support.Media.Compat.25.1.1\lib\MonoAndroid70\Xamarin.Android.Support.Media.Compat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Fragment">
+      <HintPath>..\packages\Xamarin.Android.Support.Fragment.25.1.1\lib\MonoAndroid70\Xamarin.Android.Support.Fragment.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.25.1.1\lib\MonoAndroid70\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>..\packages\RestSharp.105.2.3\lib\MonoAndroid10\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.1\lib\netstandard1.3\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ParkimonGo\ParkimonGo.csproj">
+      <Project>{EC8DFF3B-E3B0-4154-91A5-1C29F2AFDBBE}</Project>
+      <Name>ParkimonGo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Activities\HomeActivity.cs" />
+    <Compile Include="Activities\BaseActivity.cs" />
+    <Compile Include="Fragments\HomeFragment.cs" />
+    <Compile Include="Adapters\MenuListAdapter.cs" />
+    <Compile Include="CustomServices\WebViewBaseInterface.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\HomeLayout.axml" />
+    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\layout\MenuItem.axml" />
+    <AndroidResource Include="Resources\drawable\icon.png" />
+    <AndroidResource Include="Resources\layout\HomeFragment.axml" />
+    <AndroidResource Include="Resources\layout\TestLayout.axml" />
+    <AndroidResource Include="Resources\drawable\drawer_shadow.9.png" />
+    <AndroidResource Include="Resources\drawable\ic_account_box_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_account_box_black_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_account_box_black_48dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_account_box_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_arrow_back_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_arrow_drop_down_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_arrow_drop_down_black_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_arrow_drop_down_black_48dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_barcode_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_barcode_scan_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_barcode_scan_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_barcode_scan_48dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_cancel_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_cancel_black_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_cancel_black_48dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_cancel_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_cancel_white_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_cancel_white_48dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_drawer.png" />
+    <AndroidResource Include="Resources\drawable\ic_exit_to_app_black_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_exit_to_app_black_48dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_format_indent_decrease_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_format_indent_decrease_black_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_format_indent_decrease_black_48dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_format_indent_decrease_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_format_indent_decrease_white_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_format_indent_decrease_white_48dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_format_indent_increase_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_format_indent_increase_black_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_format_indent_increase_black_48dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_format_indent_increase_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_format_indent_increase_white_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_format_indent_increase_white_48dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_list_item_next.png" />
+    <AndroidResource Include="Resources\drawable\ic_list_next_r2_48dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_map_black_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_map_black_48dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_menu_autoissue_brand_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_menu_autoissue_brand_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_menu_autoissue_brand_48dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_menu_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_menu_black_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_menu_ic_autoissue_brand.png" />
+    <AndroidResource Include="Resources\drawable\ic_menu_ic_list_black_48dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_menu_ic_list_next_48dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_menu_ic_list_previous_48dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_mode_edit_black_18dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_mode_edit_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_mode_edit_black_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_mode_edit_black_48dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_navigate_before_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_navigate_before_black_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_navigate_before_black_48dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_navigate_before_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_navigate_before_white_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_navigate_before_white_48dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_navigate_next_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_navigate_next_black_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_navigate_next_black_48dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_navigate_next_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_navigate_next_white_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_navigate_next_white_48dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_near_me_black_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_near_me_black_48dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_offline_pin_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_offline_pin_black_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_offline_pin_black_48dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_offline_pin_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_offline_pin_white_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_offline_pin_white_48dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_photo_camera_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_photo_camera_black_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_photo_camera_black_48dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_photo_camera_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_print_black_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_settings_applications_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_settings_applications_black_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_settings_applications_black_48dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_settings_applications_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_settings_applications_white_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_settings_applications_white_48dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_settings_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_settings_black_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_skip_next_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_skip_next_black_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_skip_next_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_skip_next_white_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_skip_next_white_48dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_skip_previous_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_skip_previous_black_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_skip_previous_black_48dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_skip_previous_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_skip_previous_white_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_skip_previous_white_48dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_subject_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_subject_black_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_subject_black_48dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_subject_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_subject_white_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_subject_white_48dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_view_list_black_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_view_list_black_48dp.png" />
+    <AndroidResource Include="Resources\drawable\list_previous_r2_48dp.png" />
+    <AndroidResource Include="Resources\drawable\vssver2.scc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Activities\" />
+    <Folder Include="Resources\drawable\" />
+    <Folder Include="Fragments\" />
+    <Folder Include="Adapters\" />
+    <Folder Include="CustomServices\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Build.Download.0.4.2\build\Xamarin.Build.Download.targets" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.2\build\Xamarin.Build.Download.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Compat.25.1.1\build\MonoAndroid70\Xamarin.Android.Support.Compat.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Compat.25.1.1\build\MonoAndroid70\Xamarin.Android.Support.Compat.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Core.UI.25.1.1\build\MonoAndroid70\Xamarin.Android.Support.Core.UI.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Core.UI.25.1.1\build\MonoAndroid70\Xamarin.Android.Support.Core.UI.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Core.Utils.25.1.1\build\MonoAndroid70\Xamarin.Android.Support.Core.Utils.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Core.Utils.25.1.1\build\MonoAndroid70\Xamarin.Android.Support.Core.Utils.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Media.Compat.25.1.1\build\MonoAndroid70\Xamarin.Android.Support.Media.Compat.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Media.Compat.25.1.1\build\MonoAndroid70\Xamarin.Android.Support.Media.Compat.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Fragment.25.1.1\build\MonoAndroid70\Xamarin.Android.Support.Fragment.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Fragment.25.1.1\build\MonoAndroid70\Xamarin.Android.Support.Fragment.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.v4.25.1.1\build\MonoAndroid70\Xamarin.Android.Support.v4.targets" Condition="Exists('..\packages\Xamarin.Android.Support.v4.25.1.1\build\MonoAndroid70\Xamarin.Android.Support.v4.targets')" />
+</Project>
