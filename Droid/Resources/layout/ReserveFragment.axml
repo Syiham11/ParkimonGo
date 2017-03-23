@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:id="@+id/ActionBarMain">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_below="@+id/TitleBarTextMain"
+            android:id="@+id/tabBar">
+            <RelativeLayout
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:id="@+id/ActionTabHistory"
+                android:gravity="center_vertical">
+                <TextView
+                    android:text="History"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtTab1"
+                    android:layout_marginLeft="10dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:id="@+id/ActionTabETicket"
+                android:gravity="center">
+                <TextView
+                    android:text="E-Ticket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtTab2"
+                    android:textColor="#fff6a80b" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:id="@+id/ActionTabFines"
+                android:gravity="right">
+                <TextView
+                    android:text="Fines"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/txtTab3"
+                    android:gravity="center_vertical"
+                    android:layout_marginRight="10dp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ff757575" />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ActionBarMain" />
+</LinearLayout>

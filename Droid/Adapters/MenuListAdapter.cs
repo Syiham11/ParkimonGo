@@ -1,19 +1,13 @@
 ﻿using Android.Content;
-using Android.Util;
 using Android.Views;
 using Android.Widget;
-using Android.Graphics;
 
 namespace ParkimonGo.Droid
 {
 	class MenuListAdapter : BaseAdapter
 	{
-
 		Context mContext;
 		string[] mNavItems;
-
-		Typeface nexaBold;
-		Typeface nexaLight;
 
 		public MenuListAdapter(Context context, string[] navItems)
 		{
@@ -47,32 +41,23 @@ namespace ParkimonGo.Droid
 		public override View GetView(int position, View convertView, ViewGroup parent)
 		{
 			if (convertView == null)
-			{
 				convertView = LayoutInflater.From(mContext).Inflate(Resource.Layout.MenuItem, null, false);
-			}
-			var titleView = (TextView)convertView.FindViewById(Resource.Id.title);
+			
 			var navItem = GetNavItem(position);
-			titleView.Text = navItem;
 
+			View returnView;
 			if (position == 1 || position == 2)
 			{
-				titleView.SetTypeface(nexaBold, TypefaceStyle.Normal);
-				titleView.SetTextSize(ComplexUnitType.Dip, 13);
-				convertView.SetMinimumHeight(80);
+				returnView = convertView.FindViewById(Resource.Id.itemChild);
+				returnView.FindViewById<TextView>(Resource.Id.cTitle).Text = navItem;
 			}
 			else
 			{
-				titleView.SetTypeface(nexaLight, TypefaceStyle.Normal);
-				titleView.SetTextSize(ComplexUnitType.Dip, 18);
-				convertView.SetMinimumHeight(80);
+				returnView = convertView.FindViewById(Resource.Id.itemParent);
+				returnView.FindViewById<TextView>(Resource.Id.pTitle).Text = navItem;
 			}
-			//else {
-			//	titleView.SetTypeface(nexaLight, TypefaceStyle.Normal);
-			//	titleView.SetTextSize(ComplexUnitType.Dip, 12);
-			//	convertView.SetMinimumHeight(80);
-			//}
 
-			return convertView;
+			return returnView;
 		}
 	}
 }

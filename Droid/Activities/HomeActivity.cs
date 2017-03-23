@@ -1,11 +1,9 @@
 ﻿using Android.App;
 using Android.OS;
-using Android.Views;
 using Android.Widget;
-using Android.Graphics;
-using System.Net;
 
 using Android.Support.V4.Widget;
+
 using Fragment = Android.Support.V4.App.Fragment;
 using FragmentTransaction = Android.Support.V4.App.FragmentTransaction;
 
@@ -33,16 +31,6 @@ namespace ParkimonGo.Droid
 			FragmentTransaction fragmentTx = SupportFragmentManager.BeginTransaction();
 			fragmentTx.Replace(Resource.Id.mainFragmentContent, fragment).Commit();
 
-			//Load Slide menu
-			//var avatar = (ImageView)FindViewById(Resource.Id.avatar);
-			//if (Settings.User.photoURL != null && Settings.User.photoURL != "")
-			//{
-			//	Koush.UrlImageViewHelper.SetUrlDrawable(avatar, Settings.User.photoURL);
-			//}
-
-			//TextView username = (TextView)FindViewById(Resource.Id.menu_userName);
-			//username.Text = "Hey, " + Settings.User.name;
-
 			mDrawerLayout = (DrawerLayout)FindViewById(Resource.Id.drawerLayout);
 			mDrawerPane = (RelativeLayout)FindViewById(Resource.Id.drawerPane);
 			mDrawerList = (ListView)FindViewById(Resource.Id.menuList);
@@ -55,7 +43,7 @@ namespace ParkimonGo.Droid
 			// Drawer Item click listeners
 			mDrawerList.ItemClick += (sender, args) => ListItemClicked(args.Position);
 
-			mDrawerLayout.OpenDrawer(mDrawerPane);
+			FindViewById<ImageView>(Resource.Id.ActionOpenMenu).Click += (sender, e) => mDrawerLayout.OpenDrawer(mDrawerPane);
 		}
 
 		private void ListItemClicked(int position)
@@ -64,15 +52,12 @@ namespace ParkimonGo.Droid
 
 			switch (position)
 			{
-				case 0:
+				case 1:
 					fragment = new HomeFragment();
 					break;
-				//case 1:
-				//	fragment = new UserDailyDealsFragment();
-				//	break;
-				//case 2:
-				//	fragment = new UserOffersFragment();
-				//	break;
+				case 2:
+					fragment = new ReserveFragment();
+					break;
 				//case 3:
 				//	fragment = new UserFavoritesFragment();
 				//	break;

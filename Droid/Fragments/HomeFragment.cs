@@ -1,10 +1,7 @@
 ﻿using Android.Views;
-using Android.Widget;
 using Android.OS;
 using Android.Graphics;
 using System.Net;
-
-using System;
 
 using Fragment = Android.Support.V4.App.Fragment;
 using Android.Webkit;
