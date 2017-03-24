@@ -61,7 +61,8 @@ namespace ParkimonGo.Droid
 
 		void ActionPay(object sender, EventArgs e)
 		{
-			//mSuperActivity.StartActivity(new Intent(mSuperActivity, typeof(AddPaymentActivity)));
+			var activity = mContext as HomeActivity;
+			activity.StartActivity(new Intent(activity, typeof(PayActivity)));
 			//mSuperActivity.OverridePendingTransition(Resource.Animation.fromLeft, Resource.Animation.toRight);
 		}
 	}

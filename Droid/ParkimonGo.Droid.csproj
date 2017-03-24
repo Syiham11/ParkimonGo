@@ -94,6 +94,11 @@
     <Compile Include="Fragments\LongtermFragment.cs" />
     <Compile Include="Fragments\BaseFragment.cs" />
     <Compile Include="Adapters\LongtermListAdapter.cs" />
+    <Compile Include="Fragments\LoginFragment.cs" />
+    <Compile Include="Fragments\RegisterFragment.cs" />
+    <Compile Include="Fragments\PayActiveFragment.cs" />
+    <Compile Include="Fragments\PayExpiredFragment.cs" />
+    <Compile Include="Adapters\PayActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -107,7 +112,6 @@
     <AndroidResource Include="Resources\layout\MenuItem.axml" />
     <AndroidResource Include="Resources\drawable\icon.png" />
     <AndroidResource Include="Resources\layout\HomeFragment.axml" />
-    <AndroidResource Include="Resources\layout\TestLayout.axml" />
     <AndroidResource Include="Resources\drawable\icon_menu.png" />
     <AndroidResource Include="Resources\drawable\CS_logo.png" />
     <AndroidResource Include="Resources\drawable\icon_drop_down.png" />
@@ -120,6 +124,12 @@
     <AndroidResource Include="Resources\drawable\icon_wallet.png" />
     <AndroidResource Include="Resources\layout\LongtermFragment.axml" />
     <AndroidResource Include="Resources\layout\ParkingItem.axml" />
+    <AndroidResource Include="Resources\layout\LoginFragment.axml" />
+    <AndroidResource Include="Resources\drawable\border.xml" />
+    <AndroidResource Include="Resources\layout\RegisterFragment.axml" />
+    <AndroidResource Include="Resources\drawable\spinner_selector.xml" />
+    <AndroidResource Include="Resources\drawable\icon_down.png" />
+    <AndroidResource Include="Resources\layout\PayLayout.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Activities\" />

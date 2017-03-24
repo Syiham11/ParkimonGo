@@ -2,4 +2,5 @@
 <resources>
 	<string name="hello">Hello World, Click Me!</string>
 	<string name="app_name">ParkimonGo.Droid</string>
+	<string name="profile_title_prompt">Select your title</string>
 </resources>

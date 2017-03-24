@@ -43,10 +43,11 @@ namespace ParkimonGo.Droid
 			// Drawer Item click listeners
 			mDrawerList.ItemClick += (sender, args) => ListItemClicked(args.Position);
 
+			FindViewById<TextView>(Resource.Id.ActionLogin).Click += (sender, e) => ListItemClicked(5);
 			FindViewById<ImageView>(Resource.Id.ActionOpenMenu).Click += (sender, e) => mDrawerLayout.OpenDrawer(mDrawerPane);
 		}
 
-		private void ListItemClicked(int position)
+		public void ListItemClicked(int position)
 		{
 			Fragment fragment = null;
 
@@ -56,14 +57,17 @@ namespace ParkimonGo.Droid
 					fragment = new HomeFragment();
 					break;
 				case 2:
-					fragment = new ReserveFragment();
+					fragment = new ReserveFragment(1);
 					break;
-				//case 3:
-				//	fragment = new UserFavoritesFragment();
-				//	break;
-				//case 4:
-				//	fragment = new UserProfileFragment();
-				//	break;
+				case 3:
+					fragment = new RegisterFragment();
+					break;
+				case 4:
+					fragment = new ReserveFragment(2);
+					break;
+				case 5:
+					fragment = new LoginFragment();
+					break;
 				default:
 					return;
 			}

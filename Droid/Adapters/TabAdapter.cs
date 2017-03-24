@@ -18,7 +18,7 @@ namespace ParkimonGo.Droid
 
 		public override int Count
 		{
-			get { return 3; }
+			get { return _items.Count; }
 		}
 
 		public override Fragment GetItem(int position)

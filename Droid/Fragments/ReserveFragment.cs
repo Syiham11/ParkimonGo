@@ -12,9 +12,15 @@ namespace ParkimonGo.Droid
 {
 	public class ReserveFragment : Fragment
 	{
+		int _tabIndex;
 		ViewPager _pager;
 
 		TextView _txtTab1, _txtTab2, _txtTab3;
+
+		public ReserveFragment(int tabIndex)
+		{
+			_tabIndex = tabIndex;
+		}
 
 		public override void OnCreate(Bundle savedInstanceState)
 		{
@@ -35,7 +41,7 @@ namespace ParkimonGo.Droid
 
 			List<Fragment> fragments = new List<Fragment>();
 			fragments.Add(new HistoryFragment());
-			fragments.Add(new ETicketFragment());
+			fragments.Add(new ETicketFragment(_tabIndex));
 			fragments.Add(new FinesFragment());
 
 			TabAdapter adaptor = new TabAdapter(FragmentManager, fragments);

@@ -12,11 +12,17 @@ namespace ParkimonGo.Droid
 {
 	public class ETicketFragment : BaseFragment
 	{
+		int _tabIndex;
+
 		ViewPager _pager;
 
 		TextView _txtTab1, _txtTab2, _txtTab3;
 		LinearLayout _barTab1, _barTab2, _barTab3;
 
+		public ETicketFragment(int tabIndex)
+		{
+			_tabIndex = tabIndex;
+		}
 		public override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
@@ -49,7 +55,7 @@ namespace ParkimonGo.Droid
 			_pager.Adapter = adaptor;
 			_pager.PageSelected += PagerOnPageSelected;
 
-			SetPage(1);
+			SetPage(_tabIndex);
 
 			return view;
 		}
