@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textView2"
-            android:textColor="#ff000000"
+            android:textColor="@color/gray"
             android:textSize="12dp" />
     </LinearLayout>
     <LinearLayout
@@ -41,7 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textView3"
-            android:textColor="#ff000000" />
+            android:textColor="@color/gray" />
         <EditText
             android:id="@+id/etEmail"
             android:layout_width="match_parent"
@@ -65,7 +65,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textView3"
-            android:textColor="#ff000000" />
+            android:textColor="@color/gray" />
         <EditText
             android:id="@+id/etEmail"
             android:layout_width="match_parent"
@@ -106,7 +106,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/checkBox1"
-            android:textColor="#ff000000"
+            android:textColor="@color/gray"
             android:buttonTint="#ff565656" />
     </LinearLayout>
     <LinearLayout
@@ -121,14 +121,19 @@
         android:gravity="center">
         <Button
             android:text="Login"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:id="@+id/ActionLogin" />
+            android:id="@+id/ActionLogin"
+            android:background="@color/gray"
+            android:layout_weight="1"
+            android:layout_marginRight="20dp" />
         <Button
             android:text="Register"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:id="@+id/ActionRegister" />
+            android:id="@+id/ActionRegister"
+            android:background="@color/gray"
+            android:layout_weight="1" />
     </LinearLayout>
     <LinearLayout
         android:orientation="vertical"

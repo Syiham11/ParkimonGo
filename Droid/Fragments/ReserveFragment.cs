@@ -10,7 +10,7 @@ using Fragment = Android.Support.V4.App.Fragment;
 
 namespace ParkimonGo.Droid
 {
-	public class ReserveFragment : Fragment
+	public class ReserveFragment : BaseFragment
 	{
 		int _tabIndex;
 		ViewPager _pager;
@@ -67,20 +67,20 @@ namespace ParkimonGo.Droid
 
 		private void SetSelect(int position)
 		{
-			_txtTab1.SetTextColor(Color.Gray);
-			_txtTab2.SetTextColor(Color.Gray);
-			_txtTab3.SetTextColor(Color.Gray);
+			_txtTab1.SetTextColor(_cOrange);
+			_txtTab2.SetTextColor(_cOrange);
+			_txtTab3.SetTextColor(_cOrange);
 
 			switch (position)
 			{
 				case 0:
-					_txtTab1.SetTextColor(Color.Orange);
+					_txtTab1.SetTextColor(_cOrange);
 					break;
 				case 1:
-					_txtTab2.SetTextColor(Color.Orange);
+					_txtTab2.SetTextColor(_cOrange);
 					break;
 				case 2:
-					_txtTab3.SetTextColor(Color.Orange);
+					_txtTab3.SetTextColor(_cOrange);
 					break;
 			}
 		}

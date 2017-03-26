@@ -72,9 +72,9 @@ namespace ParkimonGo.Droid
 
 		private void SetSelect(int position)
 		{
-			_txtTab1.SetTextColor(Color.Gray);
-			_txtTab2.SetTextColor(Color.Gray);
-			_txtTab3.SetTextColor(Color.Gray);
+			_txtTab1.SetTextColor(_cGray);
+			_txtTab2.SetTextColor(_cGray);
+			_txtTab3.SetTextColor(_cGray);
 
 			_barTab1.SetBackgroundColor(Color.Transparent);
 			_barTab2.SetBackgroundColor(Color.Transparent);
@@ -83,16 +83,16 @@ namespace ParkimonGo.Droid
 			switch (position)
 			{
 				case 0:
-					_txtTab1.SetTextColor(Color.Orange);
-					_barTab1.SetBackgroundColor(Color.Orange);
+					_txtTab1.SetTextColor(_cOrange);
+					_barTab1.SetBackgroundColor(_cOrange);
 					break;
 				case 1:
-					_txtTab2.SetTextColor(Color.Orange);
-					_barTab2.SetBackgroundColor(Color.Orange);
+					_txtTab2.SetTextColor(_cOrange);
+					_barTab2.SetBackgroundColor(_cOrange);
 					break;
 				case 2:
-					_txtTab3.SetTextColor(Color.Orange);
-					_barTab3.SetBackgroundColor(Color.Orange);
+					_txtTab3.SetTextColor(_cOrange);
+					_barTab3.SetBackgroundColor(_cOrange);
 					break;
 			}
 		}

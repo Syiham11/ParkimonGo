@@ -1,4 +1,5 @@
 ﻿using Android.App;
+using Android.Graphics;
 using Android.OS;
 using Android.Views;
 
@@ -10,6 +11,7 @@ namespace ParkimonGo.Droid
 {
 	public class BaseActivity : FragmentActivity
 	{
+		public Color _cOrange = Color.ParseColor("#FF6e2b");
 		AlertDialog.Builder alert;
 
 		protected override void OnCreate(Bundle savedInstanceState)

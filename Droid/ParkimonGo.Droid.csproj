@@ -69,6 +69,9 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.10.0.1\lib\netstandard1.3\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="AndHUD">
+      <HintPath>..\Components\AndHUD-1.3.1\lib\android\AndHUD.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ParkimonGo\ParkimonGo.csproj">
@@ -98,7 +101,7 @@
     <Compile Include="Fragments\RegisterFragment.cs" />
     <Compile Include="Fragments\PayActiveFragment.cs" />
     <Compile Include="Fragments\PayExpiredFragment.cs" />
-    <Compile Include="Adapters\PayActivity.cs" />
+    <Compile Include="Activities\PayActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -126,10 +129,11 @@
     <AndroidResource Include="Resources\layout\ParkingItem.axml" />
     <AndroidResource Include="Resources\layout\LoginFragment.axml" />
     <AndroidResource Include="Resources\drawable\border.xml" />
-    <AndroidResource Include="Resources\layout\RegisterFragment.axml" />
     <AndroidResource Include="Resources\drawable\spinner_selector.xml" />
     <AndroidResource Include="Resources\drawable\icon_down.png" />
     <AndroidResource Include="Resources\layout\PayLayout.axml" />
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\layout\RegisterFragment.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Activities\" />
@@ -137,6 +141,12 @@
     <Folder Include="Fragments\" />
     <Folder Include="Adapters\" />
     <Folder Include="CustomServices\" />
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="AndHUD">
+      <Version>1.3.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Build.Download.0.4.2\build\Xamarin.Build.Download.targets" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.2\build\Xamarin.Build.Download.targets')" />

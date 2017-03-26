@@ -40,9 +40,19 @@ namespace ParkimonGo.Droid
 
 			var aaa = spinner.Prompt;
 
-			view.FindViewById<Button>(Resource.Id.ActionRegister).Click += (sender, e) => rootActivity.ListItemClicked(1);
+			view.FindViewById<Button>(Resource.Id.ActionRegister).Click += ActionRegister;
 
 			return view;
+		}
+
+		async void ActionRegister(object sender, EventArgs e)
+		{
+			ShowLoadingView("Retriving Daily Deals...");
+
+			var response = await _apiClient.UserRegister();
+
+			HideLoadingView();
+			//rootActivity.ListItemClicked(1);
 		}
 	}
 }

@@ -79,12 +79,12 @@ namespace ParkimonGo.Droid
 			switch (position)
 			{
 				case 0:
-					_txtTab1.SetTextColor(Color.Orange);
-					_barTab1.SetBackgroundColor(Color.Orange);
+					_txtTab1.SetTextColor(_cOrange);
+					_barTab1.SetBackgroundColor(_cOrange);
 					break;
 				case 1:
-					_txtTab2.SetTextColor(Color.Orange);
-					_barTab2.SetBackgroundColor(Color.Orange);
+					_txtTab2.SetTextColor(_cOrange);
+					_barTab2.SetBackgroundColor(_cOrange);
 					break;
 			}
 		}
