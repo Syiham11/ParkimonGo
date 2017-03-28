@@ -1,4 +1,5 @@
 ﻿
+using Android.App;
 using Android.Graphics;
 using Android.OS;
 using Android.Views;
@@ -10,6 +11,8 @@ namespace ParkimonGo.Droid
 	public class BaseFragment : Fragment
 	{
 		public ApiClient _apiClient = new ApiClient();
+
+		AlertDialog.Builder alert;
 
 		public Color _cOrange = Color.ParseColor("#FF6e2b");
 		public Color _cGray = Color.ParseColor("#404040");
@@ -42,6 +45,19 @@ namespace ParkimonGo.Droid
 			Activity.RunOnUiThread(() =>
 			{
 				AndHUD.Shared.Dismiss(Activity);
+			});
+		}
+
+		public void ShowMessageBox(string title, string message, bool isFinish = false)
+		{
+			alert = new AlertDialog.Builder(Activity);
+			alert.SetTitle(title);
+			alert.SetMessage(message);
+			alert.SetCancelable(false);
+			alert.SetPositiveButton("OK", delegate { if (isFinish) Activity.Finish(); });
+			Activity.RunOnUiThread(() =>
+			{
+				alert.Show();
 			});
 		}
 	}

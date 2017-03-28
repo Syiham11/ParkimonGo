@@ -56,6 +56,7 @@ namespace ParkimonGo.Droid
 			_pager.PageSelected += PagerOnPageSelected;
 
 			SetPage(0);
+			SetSelect(0);
 		}
 
 		private void SetPage(int position)

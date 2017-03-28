@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -13,40 +14,57 @@ namespace ParkimonGo
 {
 	public class ApiClient
 	{
-		const string API_BASE = "https://pems-sit.pemsportal.com/MobilePaymentApp.MobilePayment.svc/";
-
 		HttpClient _client = new HttpClient();
 
-		public ApiClient()
+		public async Task<CommonMessage> UserRegister(RequestRegister requestRegister)
 		{
-			//System.Net.ServicePointManager.ServerCertificateValidationCallback += (o, certificate, chain, errors) => true;
-
-		}
-
-		public async Task<string> UserRegister()
-		{
-			var url = API_BASE + "Register";
+			var url = Constants.API_BASE + "Register";
 
 			try
 			{
-				var strRequest = JsonConvert.SerializeObject(new RequestRegister());
-				//var requestBody = new StringContent(strRequest);
-
+				var strRequest = JsonConvert.SerializeObject(requestRegister);
 				var content = new StringContent(strRequest, Encoding.UTF8, "application/json");
 
 				var response = await _client.PostAsync(url, content);
-				return response.Content.ReadAsStringAsync().Result;
+				var responseJson = response.Content.ReadAsStringAsync().Result;
+
+				var responseObject = JsonConvert.DeserializeObject<RequestRegister>(responseJson);
+
+				return responseObject.CommonMessages[0];
 			}
 			catch (Exception e)
 			{
-				//Console.WriteLine("Exception in SendPushDeviceToken:" + e.Message);
+				Debug.WriteLine("Exception in UserRegister:" + e.Message);
+				return null;
+			}
+		}
+
+		public async Task<CommonMessage> UserLogin(RequestLogin requestLogin)
+		{
+			var url = Constants.API_BASE + "Login";
+
+			try
+			{
+				var strRequest = JsonConvert.SerializeObject(requestLogin);
+				var content = new StringContent(strRequest, Encoding.UTF8, "application/json");
+
+				var response = await _client.PostAsync(url, content);
+				var responseJson = response.Content.ReadAsStringAsync().Result;
+
+				var responseObject = JsonConvert.DeserializeObject<RequestLogin>(responseJson);
+
+				return responseObject.CommonMessages[0];
+			}
+			catch (Exception e)
+			{
+				Debug.WriteLine("Exception in UserLogin:" + e.Message);
 				return null;
 			}
 		}
 
 		public async Task<string> GetGender()
 		{
-			var url = API_BASE + "GetGender";
+			var url = Constants.API_BASE + "GetGender";
 
 			try
 			{
@@ -55,7 +73,7 @@ namespace ParkimonGo
 			}
 			catch (Exception e)
 			{
-				//Console.WriteLine("Exception in SendPushDeviceToken:" + e.Message);
+				Debug.WriteLine("Exception in GetGender:" + e.Message);
 				return null;
 			}
 		}

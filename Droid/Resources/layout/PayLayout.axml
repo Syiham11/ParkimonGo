@@ -41,13 +41,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/button1"
-                android:backgroundTint="@color/gray" />
+                android:background="@drawable/btnround"
+                android:layout_marginBottom="5dp" />
             <Button
                 android:text="HISTORY"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/button2"
-                android:backgroundTint="@color/gray" />
+                android:background="@drawable/btnround" />
         </LinearLayout>
     </LinearLayout>
     <RelativeLayout

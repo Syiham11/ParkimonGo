@@ -25,10 +25,20 @@ namespace ParkimonGo.Droid
 
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 		{
-			// Use this to return your custom view for this Fragment
-			// return inflater.Inflate(Resource.Layout.YourFragment, container, false);
+			var view = inflater.Inflate(Resource.Layout.PayActiveFragment, container, false);
 
-			return base.OnCreateView(inflater, container, savedInstanceState);
+			var listView = view.FindViewById<ListView>(Resource.Id.listView);
+
+			var payments = new List<Payment>();
+			payments.Add(new Payment("2", "Descrition \n Dubai", 159872, DateTime.Now));
+			payments.Add(new Payment("d", "Descrition \n UAE AD", 159872, DateTime.Now));
+			payments.Add(new Payment("2", "Descrition \n AAA", 159872, DateTime.Now));
+
+			var adapter = new PayActiveAdapter(this.Activity, payments);
+			listView.Adapter = adapter;
+			adapter.NotifyDataSetChanged();
+
+			return view;
 		}
 	}
 }

@@ -49,7 +49,7 @@ namespace ParkimonGo.Droid
 
 		public override View GetView(int position, View convertView, ViewGroup parent)
 		{
-			convertView = LayoutInflater.From(mContext).Inflate(Resource.Layout.ParkingItem, null);
+			convertView = LayoutInflater.From(mContext).Inflate(Resource.Layout.ItemParking, null);
 			convertView.FindViewById(Resource.Id.ActionPay).Click += ActionPay;
 
 			var parking = GetParking(position);

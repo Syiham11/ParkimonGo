@@ -67,9 +67,9 @@ namespace ParkimonGo.Droid
 
 		private void SetSelect(int position)
 		{
-			_txtTab1.SetTextColor(_cOrange);
-			_txtTab2.SetTextColor(_cOrange);
-			_txtTab3.SetTextColor(_cOrange);
+			_txtTab1.SetTextColor(_cGray);
+			_txtTab2.SetTextColor(_cGray);
+			_txtTab3.SetTextColor(_cGray);
 
 			switch (position)
 			{

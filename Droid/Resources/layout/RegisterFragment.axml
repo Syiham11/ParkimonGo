@@ -79,11 +79,176 @@
                     android:layout_height="35dp"
                     android:id="@+id/relativeLayout1">
                     <Spinner
-                        android:id="@+id/selectTitle"
+                        android:id="@+id/spTitle"
                         android:prompt="@string/profile_title_prompt"
                         android:textColor="#000000"
                         android:popupBackground="#D6D6D6"
-                        android:pointerIcon="arrow"
+                        android:scrollIndicators="none"
+                        android:background="@drawable/border"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <ImageView
+                        android:src="@drawable/icon_down"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:id="@+id/imageView1"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp" />
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout3"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:text="First name *"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView3"
+                    android:textColor="#ff000000" />
+                <EditText
+                    android:id="@+id/txtFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:hint="Enter Email"
+                    android:background="@drawable/border"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:textColor="@color/gray"
+                    android:paddingLeft="10dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout3"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:text="Middle name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView3"
+                    android:textColor="#ff000000" />
+                <EditText
+                    android:id="@+id/txtMiddleName"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:hint="Enter Email"
+                    android:background="@drawable/border"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:textColor="@color/gray"
+                    android:paddingLeft="10dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout3"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:text="Last name *"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView3"
+                    android:textColor="#ff000000" />
+                <EditText
+                    android:id="@+id/txtLastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:hint="Enter Email"
+                    android:background="@drawable/border"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:textColor="@color/gray"
+                    android:paddingLeft="10dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout3"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:text="Email *"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView3"
+                    android:textColor="#ff000000" />
+                <EditText
+                    android:id="@+id/txtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:hint="Enter Email"
+                    android:background="@drawable/border"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:textColor="@color/gray"
+                    android:paddingLeft="10dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout3"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:text="Password *"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView3"
+                    android:textColor="#ff000000" />
+                <EditText
+                    android:id="@+id/txtPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:hint="Enter Email"
+                    android:background="@drawable/border"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:password="true"
+                    android:textColor="@color/gray"
+                    android:paddingLeft="10dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout2"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#ff000000">
+                <TextView
+                    android:text="Suffix"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView3"
+                    android:textColor="#ff000000" />
+                <RelativeLayout
+                    android:minWidth="25px"
+                    android:minHeight="25px"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:id="@+id/relativeLayout1">
+                    <Spinner
+                        android:id="@+id/spSuffix"
+                        android:prompt="@string/profile_title_prompt"
+                        android:textColor="#000000"
+                        android:popupBackground="#D6D6D6"
                         android:scrollIndicators="none"
                         android:background="@drawable/border"
                         android:layout_width="match_parent"
@@ -113,14 +278,15 @@
                     android:id="@+id/textView3"
                     android:textColor="#ff000000" />
                 <EditText
-                    android:id="@+id/etEmail"
+                    android:id="@+id/txtPFirstName"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:hint="Enter Email"
-                    android:padding="10dp"
                     android:background="@drawable/border"
                     android:inputType="textEmailAddress"
-                    android:singleLine="true" />
+                    android:singleLine="true"
+                    android:textColor="@color/gray"
+                    android:paddingLeft="10dp" />
             </LinearLayout>
             <LinearLayout
                 android:orientation="vertical"
@@ -159,11 +325,10 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
                             <Spinner
-                                android:id="@+id/selectTitle"
+                                android:id="@+id/spMonth"
                                 android:prompt="@string/profile_title_prompt"
                                 android:textColor="#000000"
                                 android:popupBackground="#D6D6D6"
-                                android:pointerIcon="arrow"
                                 android:scrollIndicators="none"
                                 android:background="@drawable/border"
                                 android:layout_width="match_parent"
@@ -195,11 +360,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent">
                             <Spinner
-                                android:id="@+id/selectTitle"
+                                android:id="@+id/spDay"
                                 android:prompt="@string/profile_title_prompt"
                                 android:textColor="#000000"
                                 android:popupBackground="#D6D6D6"
-                                android:pointerIcon="arrow"
                                 android:scrollIndicators="none"
                                 android:background="@drawable/border"
                                 android:layout_width="match_parent"
@@ -229,11 +393,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent">
                             <Spinner
-                                android:id="@+id/selectTitle"
+                                android:id="@+id/spYear"
                                 android:prompt="@string/profile_title_prompt"
                                 android:textColor="#000000"
                                 android:popupBackground="#D6D6D6"
-                                android:pointerIcon="arrow"
                                 android:scrollIndicators="none"
                                 android:background="@drawable/border"
                                 android:layout_width="match_parent"

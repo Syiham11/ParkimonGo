@@ -33,6 +33,7 @@
     <Compile Include="Model\Parking.cs" />
     <Compile Include="ApiClient.cs" />
     <Compile Include="Model\Requests.cs" />
+    <Compile Include="Model\Payment.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />

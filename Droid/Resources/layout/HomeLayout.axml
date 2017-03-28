@@ -51,7 +51,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/ActionLogin"
-                        android:textColor="#d6dee3" />
+                        android:textColor="@color/gray" />
                 </LinearLayout>
                 <LinearLayout
                     android:orientation="horizontal"
@@ -80,7 +80,7 @@
     <RelativeLayout
         android:layout_width="250dp"
         android:layout_height="match_parent"
-        android:background="#ff0e3f45"
+        android:background="@color/gray"
         android:id="@+id/drawerPane"
         android:layout_gravity="start">
     <!-- Profile Box -->

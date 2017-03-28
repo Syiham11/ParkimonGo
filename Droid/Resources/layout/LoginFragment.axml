@@ -37,20 +37,21 @@
         android:layout_marginTop="20dp"
         android:backgroundTint="#ff000000">
         <TextView
-            android:text="Last name"
+            android:text="Email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textView3"
             android:textColor="@color/gray" />
         <EditText
-            android:id="@+id/etEmail"
+            android:id="@+id/txtEmail"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:hint="Enter Email"
-            android:padding="10dp"
             android:background="@drawable/border"
             android:inputType="textEmailAddress"
-            android:singleLine="true" />
+            android:singleLine="true"
+            android:paddingLeft="10dp"
+            android:textColor="@color/gray" />
     </LinearLayout>
     <LinearLayout
         android:orientation="vertical"
@@ -67,14 +68,16 @@
             android:id="@+id/textView3"
             android:textColor="@color/gray" />
         <EditText
-            android:id="@+id/etEmail"
+            android:id="@+id/txtPassword"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:hint="Enter Email"
-            android:padding="10dp"
             android:background="@drawable/border"
             android:inputType="textEmailAddress"
-            android:singleLine="true" />
+            android:singleLine="true"
+            android:paddingLeft="10dp"
+            android:password="true"
+            android:textColor="@color/gray" />
     </LinearLayout>
     <LinearLayout
         android:orientation="vertical"
