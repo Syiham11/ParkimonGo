@@ -21,9 +21,9 @@ namespace ParkimonGo.Droid
 			var listView = view.FindViewById<ListView>(Resource.Id.listView);
 
 			var parkings = new List<Parking>();
-			parkings.Add(new Parking("10 Days", "100 AED"));
-			parkings.Add(new Parking("20 Days", "200 AED"));
-			parkings.Add(new Parking("30 Days", "300 AED"));
+			parkings.Add(new Parking("10 Days", "100 Rs."));
+			parkings.Add(new Parking("20 Days", "200 Rs."));
+			parkings.Add(new Parking("30 Days", "300 Rs."));
 
 			var adapter = new LongtermListAdapter(this.Activity, parkings);
 			listView.Adapter = adapter;

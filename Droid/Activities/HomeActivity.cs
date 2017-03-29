@@ -57,13 +57,13 @@ namespace ParkimonGo.Droid
 					fragment = new HomeFragment();
 					break;
 				case 2:
-					fragment = new ReserveFragment(1);
+					fragment = new ReserveFragment(0);
 					break;
 				case 3:
 					fragment = new RegisterFragment();
 					break;
 				case 4:
-					fragment = new ReserveFragment(2);
+					fragment = new ReserveFragment(1);
 					break;
 				case 5:
 					fragment = new LoginFragment();

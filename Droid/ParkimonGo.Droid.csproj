@@ -106,10 +106,6 @@
     <Compile Include="CustomServices\WebViewBaseInterface.cs" />
     <Compile Include="Fragments\ReserveFragment.cs" />
     <Compile Include="Adapters\TabAdapter.cs" />
-    <Compile Include="Fragments\ETicketFragment.cs" />
-    <Compile Include="Fragments\HistoryFragment.cs" />
-    <Compile Include="Fragments\FinesFragment.cs" />
-    <Compile Include="Fragments\VIPFragment.cs" />
     <Compile Include="Fragments\RegularFragment.cs" />
     <Compile Include="Fragments\LongtermFragment.cs" />
     <Compile Include="Fragments\BaseFragment.cs" />
@@ -137,7 +133,6 @@
     <AndroidResource Include="Resources\drawable\CS_logo.png" />
     <AndroidResource Include="Resources\drawable\icon_drop_down.png" />
     <AndroidResource Include="Resources\layout\ReserveFragment.axml" />
-    <AndroidResource Include="Resources\layout\ETicketFragment.axml" />
     <AndroidResource Include="Resources\layout\RegularFragment.axml" />
     <AndroidResource Include="Resources\drawable\icon_minus.png" />
     <AndroidResource Include="Resources\drawable\icon_plus.png" />

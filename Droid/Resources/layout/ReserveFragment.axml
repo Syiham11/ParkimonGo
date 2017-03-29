@@ -6,7 +6,6 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/civicsmart_gray_light"
         android:id="@+id/ActionBarMain">
         <LinearLayout
             android:layout_width="match_parent"
@@ -14,22 +13,8 @@
             android:orientation="horizontal"
             android:weightSum="3"
             android:layout_below="@+id/TitleBarTextMain"
-            android:id="@+id/tabBar">
-            <RelativeLayout
-                android:layout_height="match_parent"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:minWidth="25px"
-                android:minHeight="25px"
-                android:id="@+id/ActionTabHistory"
-                android:gravity="center_vertical">
-                <TextView
-                    android:text="History"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txtTab1"
-                    android:layout_marginLeft="10dp" />
-            </RelativeLayout>
+            android:id="@+id/tabBar"
+            android:gravity="center">
             <RelativeLayout
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
@@ -42,23 +27,9 @@
                     android:text="E-Ticket"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/txtTab2" />
-            </RelativeLayout>
-            <RelativeLayout
-                android:layout_height="match_parent"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:minWidth="25px"
-                android:minHeight="25px"
-                android:id="@+id/ActionTabFines"
-                android:gravity="right">
-                <TextView
-                    android:text="Fines"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:id="@+id/txtTab3"
-                    android:gravity="center_vertical"
-                    android:layout_marginRight="10dp" />
+                    android:id="@+id/txtTab2"
+                    android:textColor="#FF6e2b"
+                    android:textSize="15dp" />
             </RelativeLayout>
         </LinearLayout>
     </RelativeLayout>
@@ -70,9 +41,90 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/gray" />
-    <android.support.v4.view.ViewPager
-        android:id="@+id/pager"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/ActionBarMain" />
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout2">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/civicsmart_gray_light"
+            android:id="@+id/ActionBarMain">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:orientation="horizontal"
+                android:layout_below="@+id/TitleBarTextMain"
+                android:id="@+id/tabBar">
+                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:minWidth="25px"
+                    android:minHeight="25px"
+                    android:id="@+id/ActionTabRegular"
+                    android:gravity="center">
+                    <TextView
+                        android:text="REGULAR"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:id="@+id/txtTab1"
+                        android:textColor="#FF6e2b"
+                        android:textSize="12dp"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1" />
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:minWidth="25px"
+                        android:minHeight="25px"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:id="@+id/barTab1"
+                        android:background="#FF6e2b" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:minWidth="25px"
+                    android:minHeight="25px"
+                    android:id="@+id/ActionLongterm"
+                    android:gravity="center">
+                    <TextView
+                        android:text="LONG TERM"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:id="@+id/txtTab2"
+                        android:gravity="center_vertical"
+                        android:textSize="12dp"
+                        android:textColor="@color/gray"
+                        android:layout_weight="1" />
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:minWidth="25px"
+                        android:minHeight="25px"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:id="@+id/barTab2"
+                        android:background="#FF6e2b" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ff757575" />
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ActionBarMain" />
+    </LinearLayout>
 </LinearLayout>
