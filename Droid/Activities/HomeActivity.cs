@@ -78,6 +78,34 @@ namespace ParkimonGo.Droid
 			mDrawerList.SetItemChecked(position, true);
 			mDrawerLayout.CloseDrawer(mDrawerPane);
 		}
+
+
+
+
+		#region test
+		public string gParkingItemFragmentTag = string.Empty;
+
+		public void ChangeToParkingFragment()
+		{
+			ShowMessageBox(null, "ChangeToParkingFragment");
+		}
+		public void ResetIssueSourceReferences(string iTargetFragmenTag)
+		{
+			ShowMessageBox(null, "ResetIssueSourceReferences");
+		}
+		public void MenuPopUp_IssueFormSelection()
+		{
+			ShowMessageBox(null, "MenuPopUp_IssueFormSelection");
+		}
+		public void ChangeToTargetFragmentTag(string iTargetFragmentTag)
+		{
+			ShowMessageBox(null, "ChangeToTargetFragmentTag");
+		}
+		public void MenuPopUp_LaunchCamera()
+		{
+			ShowMessageBox(null, "MenuPopUp_LaunchCamera");
+		}
+		#endregion
 	}
 }
 
