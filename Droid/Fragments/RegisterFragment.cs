@@ -84,6 +84,36 @@ namespace ParkimonGo.Droid
 			this.SetBinding(() => _requestRegister.Email, () => _txtEmail.Text, BindingMode.TwoWay);
 			this.SetBinding(() => _requestRegister.Password, () => _txtPassword.Text, BindingMode.TwoWay);
 			this.SetBinding(() => _requestRegister.PrefferedFirstName, () => _txtPFirstName.Text, BindingMode.TwoWay);
+
+			var contentView = _view.FindViewById<LinearLayout>(Resource.Id.contentView);
+			var childs = GetAllChildren(contentView);
+			for (int i = 0; i < childs.Count; i++)
+			{
+				if (childs[i] is EditText)
+					((EditText)childs[i]).TextChanged += (s, e) => { };
+			}
+		}
+		List<View> GetAllChildren(View view)
+		{
+			if (!(view is ViewGroup))
+			{
+				List<View> viewArrayList = new List<View>();
+				viewArrayList.Add(view);
+				return viewArrayList;
+			}
+
+			List<View> result = new List<View>();
+
+			ViewGroup vg = (ViewGroup)view;
+			for (int i = 0; i < vg.ChildCount; i++)
+			{
+				View child = vg.GetChildAt(i);
+				List<View> viewArrayList = new List<View>();
+				viewArrayList.Add(view);
+				viewArrayList.AddRange(GetAllChildren(child));
+				result.AddRange(viewArrayList);
+			}
+			return result;
 		}
 
 		async void ActionRegister(object sender, EventArgs e)

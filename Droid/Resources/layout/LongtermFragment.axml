@@ -90,7 +90,7 @@
                         android:layout_weight="1"
                         android:gravity="center">
                         <TextView
-                            android:text="Fees(AED)"
+                            android:text="Fees(INR)"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:id="@+id/textView7"

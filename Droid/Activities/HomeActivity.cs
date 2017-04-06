@@ -35,7 +35,7 @@ namespace ParkimonGo.Droid
 			mDrawerPane = (RelativeLayout)FindViewById(Resource.Id.drawerPane);
 			mDrawerList = (ListView)FindViewById(Resource.Id.menuList);
 
-			string[] navList = { "Parking", "Find Parking", "Reserve Parking", "My Account", "Buy Permits", "Log out" };
+			string[] navList = { "Parking", "Find Parking", "Pay Parking", "My Account", "Buy Permits", "Log out" };
 
 			MenuListAdapter adapter = new MenuListAdapter(this, navList);
 			mDrawerList.Adapter = adapter;

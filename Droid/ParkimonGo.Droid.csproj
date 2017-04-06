@@ -151,6 +151,7 @@
     <AndroidResource Include="Resources\drawable\btnRound.xml" />
     <AndroidResource Include="Resources\layout\PayActiveFragment.axml" />
     <AndroidResource Include="Resources\layout\ItemPaymentActive.axml" />
+    <AndroidResource Include="Resources\drawable\icon_logo.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Activities\" />

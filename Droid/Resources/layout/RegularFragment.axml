@@ -41,8 +41,9 @@
             android:minHeight="25px"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:id="@+id/linearLayout3"
-            android:background="@drawable/icon_minus" />
+            android:id="@+id/ActionMinusHours"
+            android:background="@drawable/icon_minus"
+            android:layout_marginLeft="40dp" />
         <LinearLayout
             android:orientation="horizontal"
             android:minWidth="25px"
@@ -53,10 +54,10 @@
             android:layout_weight="1"
             android:gravity="center">
             <TextView
-                android:text="20.00"
+                android:text="3:00"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:id="@+id/textView3"
+                android:id="@+id/txtDuration"
                 android:textSize="70dp"
                 android:textColor="@color/gray" />
         </LinearLayout>
@@ -66,8 +67,9 @@
             android:minHeight="25px"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:id="@+id/linearLayout5"
-            android:background="@drawable/icon_plus" />
+            android:id="@+id/ActionPlusHours"
+            android:background="@drawable/icon_plus"
+            android:layout_marginRight="40dp" />
     </LinearLayout>
     <LinearLayout
         android:orientation="vertical"
@@ -94,10 +96,10 @@
                 android:textColor="@color/civicsmart_orange"
                 android:layout_marginRight="20dp" />
             <TextView
-                android:text="Rs. 3"
+                android:text="Rs. 30"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView5"
+                android:id="@+id/txtPrice"
                 android:textSize="20dp"
                 android:textColor="@color/civicsmart_orange" />
         </LinearLayout>
@@ -263,7 +265,7 @@
             android:gravity="right"
             android:padding="5dp">
             <TextView
-                android:text="Remaining Hours : 298.5"
+                android:text="Remaining Hours : 03:40"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:id="@+id/textView10"
